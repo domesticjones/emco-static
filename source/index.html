@@ -1,30 +1,15 @@
 <!doctype html>
 <html lang="en-US">
 
-<head>
-  <title>Dustin Jones | Print, UX, UI & Development</title>
-  {% include "partials/head.nunjucks" %}
-</head>
+  <head>
+    <title>EM Company, LLC | NEED NAME FOR DEVELOPMENT</title>
+    {% include "partials/head.nunjucks" %}
+  </head>
 
-<body>
-  <div id="container" class="active-hi-there">
-    {% include "partials/header.nunjucks" %}
-    <article data-section-name="hi-there" class="panel content-hero is-active">
-      {% include "partials/panel-hero.nunjucks" %}
-    </article>
-    <article data-section-name="the-record" class="panel content-about">
-      {% include "partials/panel-record.nunjucks" %}
-    </article>
-    <article data-section-name="skills" class="panel content-skills">
-      {% include "partials/panel-skills.nunjucks" %}
-    </article>
-    <article data-section-name="works" class="panel content-works">
-      {% include "partials/panel-works.nunjucks" %}
-    </article>
-    <article data-section-name="contact" class="panel content-contact">
-      {% include "partials/panel-contact.nunjucks" %}
-    </article>
-    {% include "partials/footer.nunjucks" %}
-  </div>
-</body>
+  <body>
+    <div id="container" class="landing">
+      Body of Page {% include "pages/landing.nunjucks" %} {% include "partials/footer.nunjucks" %}
+    </div>
+  </body>
+
 </html>

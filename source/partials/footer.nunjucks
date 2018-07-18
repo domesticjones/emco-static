@@ -1,19 +1,4 @@
-<figure id="spinner">
-  <img src="images/dj-spiral.svg" alt="Spinner" />
-</figure>
-<footer id="footer">
-  <p id="copyright">
-    Copyright &copy; 2018 Domestic Jones LLC. All rights reserved.
-  </p>
-</footer>
-<footer id="resize-hold">
-  <div class="resize-hold-inner">
-    {% include "data/hold-icon.nunjucks" %}
-  </div>
-</footer>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
 <!-- build:js(source/scripts) app.js defer -->
   <script src="app.js"></script>
 <!-- endbuild -->

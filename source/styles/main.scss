@@ -10,16 +10,10 @@
 
 /************* Global Layout Elements *************/
 @import
-  'elements/base',
-  'elements/header',
-  'elements/footer'
+  'elements/base'
 ;
 
-/************* Panels *************/
+/************* Pages *************/
 @import
-  'elements/panel-hero',
-  'elements/panel-skills',
-  'elements/panel-record',
-  'elements/panel-contact',
-  'elements/panel-works'
+  'pages/landing'
 ;
