@@ -1,0 +1,26 @@
+/** Link or Element Text Coloring
+ ---------------------------------------------------------*/
+@mixin linkColor($color: inherit, $state: all, $el: a) {
+  @if $state == all {
+    #{$el}, #{$el}:link, #{$el}:visited { color: $color; }
+    #{$el}:hover, #{$el}:focus, #{$el}:active { color: $color; }
+  } @else if $state == static {
+    #{$el}, #{$el}:link, #{$el}:visited { color: $color; }
+  } @else if $state == hover {
+    #{$el}:hover, #{$el}:focus, #{$el}:active { color: $color; }
+  }
+}
+
+/** Strip Lists down to nothing
+ ---------------------------------------------------------*/
+@mixin listStripped($display: block, $margin: 0, $padding: 0) {
+  list-style-type: none;
+  margin: $margin;
+  padding: $padding;
+
+  li {
+    display: $display;
+    margin: 0;
+    padding: 0;
+  }
+}

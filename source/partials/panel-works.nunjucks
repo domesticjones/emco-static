@@ -1,0 +1,11 @@
+<section class="logo-works-wrap">
+  <img src="images/dj-logo.svg" alt="Logo for Domestic Jones LLC" id="logo-works" />
+</section>
+<nav id="works-nav">
+  <button id="works-nav-prev" class="works-nav-button" type="button">Prev</button>
+  <button id="works-nav-next" class="works-nav-button" type="button">Next</button>
+</nav>
+<section id="work-slideshow-master">
+  {% include "data/work-primary.nunjucks" %}
+  {% include "data/work-other.nunjucks" %}
+</section>

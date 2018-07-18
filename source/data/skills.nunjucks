@@ -1,0 +1,72 @@
+{% set
+  bestSkills = [
+    {
+      name: 'Adobe CC',
+      details: 'Photoshop, XD, Illustrator, Premiere, InDesign, After Effects'
+    },
+    {
+      name: 'Sketch',
+      details: 'with Zeplin and InVision integrations'
+    },
+    {
+      name: 'HTML5',
+      details: 'with ARIA and ADA compliance'
+    },
+    {
+      name: 'Wordpress',
+      details: 'Theme and Plugin Development'
+    },
+    {
+      name: 'CSS',
+      details: 'with preprocessers like Sass or, to a lesser degree... Less'
+    },
+    {
+      name: 'JavaScript',
+      details: 'And a ton of experience with jQuery'
+    },
+    {
+      name: 'Templating Engines',
+      details: 'Nunjucks, Jinja, Twig'
+    },
+    {
+      name: 'Agile Workflow',
+      details: 'Have been intimate with Jira and the Atlassian suite'
+    }
+  ]
+%}
+{% set
+  otherSkills = [
+  'Git',
+  'PHP',
+  'Blade Templating',
+  'MySQL',
+  'Vue',
+  'Angular',
+  'Canvas'
+]
+%}
+<section class="pane skills-best">
+  <h1>Very Proficient</h1>
+  <ul class="skills-list">
+    {% for skill in bestSkills|sort(attribute='name') %}
+      <li class="skill-single">
+        {{ skill.name }}
+        <span>{{ skill.details }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+<section class="pane skills-other">
+  <h1>Familiar</h1>
+  <ul class="skills-list">
+    {% for skill in otherSkills|sort %}
+      <li class="skill-single">
+        {{ skill }}
+      </li>
+    {% endfor %}
+  </ul>
+  <p>
+    "Proficient" and "Familiar" seem like pretty arbitrary terms.
+    How about you just <a href="#contact" class="inline-link">get in touch with me</a>, discuss the scope of a project, then we'll see where my skills best fit.
+  </p>
+</section>

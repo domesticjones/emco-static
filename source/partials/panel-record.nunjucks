@@ -1,0 +1,34 @@
+<section class="logo-record-wrap">
+  <img src="images/dj-logo-sofahat.png" alt="Logo for Domestic Jones LLC, feat. SofaHat" id="logo-record" />
+</section>
+<section class="pane record-answers">
+  <h1>Answers</h1>
+  <h2>What’s with the name?</h2>
+  <p>
+    After my first child was born in 2005, I needed a way to share pictures with family.
+    So I bought a simple domain name for sharing a super basic photo portfolio website.
+    It came time to incorporate my business for the web and design work I was doing, so I quickly chose Domestic Jones, LLC as I already had the domain name.
+  </p>
+  <h2>What do I do?</h2>
+  <p>
+    I do media development.
+    Since playing country-disco-metal as <a href="http://guardiansofvirginity.com/" target="_blank">a Guardian</a> only feeds my soul, I focus on User Experience design (UX), User Interface design (UI), and front end development to feed my bills.
+  </p>
+  <h2>Why do I do it?</h2>
+  <p>
+    I’m compelled to solve problems and create things.
+    UX/UI design and development is an elegant way to do both.
+  </p>
+  <h2>How long has this been going on?</h2>
+  <p>
+    I started developing websites and making flyers for local punk shows in 1996.
+    Soon after, GWAR had a competition for a new, official website.
+    I was only 13 when this competition happened in 1996, but I made the top 5 submissions and that inspired me to keep going on making stuff.
+    This web and design thing wasn’t so bad.
+  </p>
+  <h2>Why do I care?</h2>
+  <p>
+    These sections usually come across as conceded.
+    Never been much of a fan because it’s <a href="#works" class="inline-link">the work</a> that’s important, right?
+  </p>
+</section>

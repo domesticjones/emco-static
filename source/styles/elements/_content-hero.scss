@@ -1,0 +1,27 @@
+/************* Hero Landing *************/
+
+.content-hero {
+  @include grid(center, center);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+#logo {
+  height: 10rem;
+}
+
+#video-backing {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+
+  video {
+    display: block;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+}

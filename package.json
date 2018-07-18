@@ -1,0 +1,63 @@
+{
+  "name": "domesticjones-website2018",
+  "version": "1.0.0",
+  "description": "Domestic Jones' Website",
+  "main": "gulpfile.js",
+  "private": true,
+  "license": "UNLICENCED",
+  "repository": "",
+  "bugs": "",
+  "homepage": "",
+  "scripts": {
+    "build": "gulp build",
+    "production": "gulp production",
+    "prod": "gulp production",
+    "size": "gulp size",
+    "watch": "gulp development",
+    "start": "gulp development",
+    "watch-production": "gulp production-debug",
+    "watch-prod": "gulp production-debug",
+    "gulp": "gulp",
+    "uncss": "uncss"
+  },
+  "contributors": [
+    "Dustin Jones <info@domesticjones.com>"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "babel-preset-es2015": "^6.16.0",
+    "browser-sync": "^2.18.6",
+    "critical": "^0.8.1",
+    "cssnano": "^3.10.0",
+    "del": "^2.2.2",
+    "eslint": "^3.13.1",
+    "eslint-config-vynyl": "^3.1.1",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^1.3.2",
+    "gulp-filter": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.0",
+    "gulp-inline-source": "^3.0.0",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-css-url": "^0.1.0",
+    "gulp-rev-delete-original": "^0.2.2",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-unused-images": "^1.1.2",
+    "gulp-useref": "^3.1.2",
+    "postcss-reporter": "^3.0.0",
+    "postcss-scss": "^0.4.0"
+  },
+  "dependencies": {
+    "vivus": "^0.4.3"
+  }
+}

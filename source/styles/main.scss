@@ -1,0 +1,25 @@
+/************* Configuration *************/
+@import
+  'config/reset',
+  'config/colors',
+  'config/effects',
+  'config/typography',
+  'config/grid',
+  'config/functions'
+;
+
+/************* Global Layout Elements *************/
+@import
+  'elements/base',
+  'elements/header',
+  'elements/footer'
+;
+
+/************* Panels *************/
+@import
+  'elements/panel-hero',
+  'elements/panel-skills',
+  'elements/panel-record',
+  'elements/panel-contact',
+  'elements/panel-works'
+;

@@ -1,0 +1,63 @@
+// Mixin for creating animations using single or "all" property transitions
+@mixin transition($transition: all 350ms ease) {
+	transition: $transition;
+}
+
+// Mixin for faster animations on the homepage
+@mixin fastTransition($transition: all 150ms ease) {
+	transition: $transition;
+}
+
+// Apply transparency to an element
+@mixin opacity($opacity: 1) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+// Apply a gaussian blur to an image in px, em, rem
+@mixin filter-blur($radius) {
+	filter: blur($radius);
+}
+
+// Alter the brightness of an image
+// Min: 0, Max: n%, Default: 100% (no change at 100%)
+@mixin filter-brightness($percent) {
+	filter: brightness($percent);
+}
+
+// Increase or decrease the contrast of an image.
+// Min: 0, Max: n%, Default: 100% (no change at 100%)
+@mixin filter-contrast($percent: 100%) {
+	filter: contrast($percent);
+}
+
+// Change the grayscale of an image
+// Min: 0, Max: 100%, Default: 0 (full color at 0)
+@mixin filter-grayscale($percent) {
+	filter: gray;
+	filter: grayscale($percent);
+}
+
+// Rotate the hue of an image
+@mixin filter-hue-rotate($rotate) {
+	filter: hue-rotate(#{$rotate}deg);
+}
+
+// Invert the colors of an image
+// Min: 0, Max: 100%, Default: 0 (no change at 0)
+@mixin filter-invert($percent: 0) {
+	filter: invert($percent);
+}
+
+// Increase or decrease the color saturation of an image.
+// Min: 0, Max: n%, Default: 100% (no change at 100%)
+@mixin filter-saturate($percent: 100%) {
+	filter: saturate($percent);
+}
+
+// Apply a sepia filter
+// Min: 0, Max: 100%, Default: 0 (full color, no sepia at 0)
+@mixin filter-sepia($percent) {
+	filter: sepia($percent);
+}

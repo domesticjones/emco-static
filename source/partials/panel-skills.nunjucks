@@ -1,0 +1,19 @@
+<section class="logo-skills-wrap">
+  <img src="images/dj-logo.svg" alt="Logo for Domestic Jones LLC" id="logo-skills" />
+</section>
+<section class="pane skills-overview">
+  <p>
+    My core focus is problem solving.
+    This leans me heavily towards user experience.
+    I don’t solve problems just for clients, but for users. In the end, it’s the users that will determine if a design, website, or app is successful.
+  </p>
+  <p>
+    Organization is my next biggest compulsory activity.
+    Ensuring that content is catalogued properly and easily accessible makes all the difference when it comes to good design and development.
+  </p>
+  <p>
+    I’m a big fan of <a href="#works" class="inline-link">collaborative projects</a>.
+    Having as much input from clients, test groups, and developers helps everything from UX, UI, and even meeting sprint deadlines.
+  </p>
+</section>
+{% include "data/skills.nunjucks" %}

@@ -1,0 +1,30 @@
+<header id="header">
+  <nav class="nav-header">
+    <ul>
+      <li class="nav-section nav-top">
+        <a href="#the-record" class="nav-item">
+          <span class="nav-icon">{% include "data/header-icon-record.nunjucks"%}</span>
+          <span>The Record</span>
+        </a>
+      </li>
+      <li class="nav-section nav-left">
+        <a href="#skills" class="nav-item">
+          <span class="nav-icon">{% include "data/header-icon-skills.nunjucks"%}</span>
+          <span>Skills</span>
+        </a>
+      </li>
+      <li class="nav-section nav-right">
+        <a href="#works" class="nav-item">
+          <span class="nav-icon">{% include "data/header-icon-works.nunjucks"%}</span>
+          <span>Works</span>
+        </a>
+      </li>
+      <li class="nav-section nav-bottom">
+        <a href="#contact" class="nav-item">
+          <span class="nav-icon">{% include "data/header-icon-contact.nunjucks"%}</span>
+          <span>Get In Touch<span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

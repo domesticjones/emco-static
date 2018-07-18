@@ -1,0 +1,85 @@
+
+
+@mixin grid(
+  $alignx: flex-start,
+  $aligny: flex-start,
+  $direction: row,
+  $wrapping: nowrap,
+  $alignwrap: flex-start) {
+
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrapping;
+    justify-content: $alignx;
+    align-items: $aligny;
+    align-content: $alignwrap;
+}
+
+@mixin grid-single(
+  $align: auto,
+  $order: 1,
+  $grow: 0,
+  $shrink: 1,
+  $basis: auto) {
+
+    align-self:$align;
+    order: $order;
+    flex: $grow $shrink $basis;
+}
+
+/*
+
+|-------------------|
+|---Flexbox Guide---|
+|-------------------|
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+For detailed documentation: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+$alignx
+    flex-start
+    flex-end
+    center
+    space-between
+    space-around
+
+$aligny
+    flex-start
+    flex-end
+    center
+    stretch
+    baseline
+
+$direction
+    row
+    row-reverse
+    column
+    column-reverse
+
+$wrapping
+    nowrap
+    wrap
+    wrap-reverse
+
+$alignwrap
+    flex-start
+    flex-end
+    center
+    stretch
+    space-between
+    space-around
+
+* * * * * *
+Single Item
+* * * * * *
+
+$align
+    auto
+    flex-start
+    flex-end
+    center
+    baseline
+    stretch
+
+*/

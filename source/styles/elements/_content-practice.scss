@@ -1,0 +1,311 @@
+/************* Practice Area Sections *************/
+
+.content-practice {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding-top: $nav-height;
+
+  &.contact {
+    margin-bottom: 0;
+  }
+}
+
+$contentHeight: calc(100vh - (#{$nav-height} * 2));
+
+.content-practice-inner {
+  @include grid(flex-start, stretch, column, nowrap, stretch);
+  background-color: $white;
+  min-height: $contentHeight;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 90vh auto;
+  @include transition(all 250ms ease-in);
+
+  &.panel-uxui {
+    background-image: url('../images/icon-uxui-dark.svg');
+  }
+
+  &.panel-frontend {
+    background-image: url('../images/icon-frontend-dark.svg');
+  }
+
+  &.panel-events {
+    background-image: url('../images/icon-events-dark.svg');
+  }
+
+  &.panel-contact {
+    background-image: url('../images/icon-contact-dark.svg');
+  }
+
+}
+
+.practice-head {
+  @include grid(space-between, stretch);
+  padding: ($nav-height * 1.5) 2em 0 2em;
+  background-color: $black;
+  overflow: hidden;
+  color: $white;
+  transform: scaleY(0);
+  opacity: 0;
+  @include transition();
+}
+
+.head-content {
+  width: 40vw;
+}
+
+.head-icon {
+  width: 10vw;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  &.uxui {
+    background-image: url('../images/icon-uxui.svg');
+  }
+
+  &.frontend {
+    background-image: url('../images/icon-frontend.svg');
+  }
+
+  &.events {
+    background-image: url('../images/icon-events.svg');
+  }
+
+  &.contact {
+    background-image: url('../images/icon-contact.svg');
+  }
+}
+
+.head-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 2rem 2rem;
+
+  li {
+    position: relative;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 0.75rem;
+      width: 1rem;
+      left: -2rem;
+      top: 0.25rem;
+      background-image: url('../images/icon-squares.svg');
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.content-pratice-work {
+  height: 100%;
+  flex-grow: 1;
+  padding: 2rem 0;
+  @include grid(space-between, center);
+}
+
+// Work List Column
+
+.work-list {
+  @include grid-single(stretch);
+  @include grid(space-between, stretch, row, wrap, space-between);
+  width: 15vw;
+  list-style-type: none;
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-2rem);
+  @include transition();
+}
+
+.work-list-item {
+  color: $green-dark;
+  font-size: 1.25rem;
+  padding: 1.5rem 2rem;
+  display: block;
+  width: 100%;
+  cursor: hand;
+  cursor: pointer;
+  transform: translateX(-100%);
+  @include transition();
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: block;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    @include transition();
+  }
+
+  &::before {
+    background-color: $green-light;
+  }
+
+  &::after {
+    background-color: $green-dark;
+  }
+
+  &:hover::before {
+    right: 0;
+  }
+
+  &:nth-child(1) { @include transition(transform 350ms 750ms ease); }
+  &:nth-child(2) { @include transition(transform 350ms 850ms ease); }
+  &:nth-child(3) { @include transition(transform 350ms 950ms ease); }
+  &:nth-child(4) { @include transition(transform 350ms 1050ms ease); }
+  &:nth-child(5) { @include transition(transform 350ms 1150ms ease); }
+  &:nth-child(6) { @include transition(transform 350ms 1250ms ease); }
+
+  &.is-active {
+    color: $white;
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      right: 0%;
+    }
+  }
+}
+
+// Work Detail Column
+
+.work-item-detail {
+@include grid-single(stretch);
+  position: relative;
+  width: 25vw;
+  padding: 1.25rem 2rem 0 2rem;
+  background-color: $green;
+  opacity: 0;
+  transform: translateX(-2rem);
+  @include transition();
+  transition-delay: 0ms;
+}
+
+.work-item-detail-inner {
+  transform: scaleY(0);
+  max-height: 0;
+  @include transition();
+
+  &.is-active {
+    transform: scaleY(1);
+    max-height: 500px;
+  }
+}
+
+// Work Detail Media
+.work-item-media {
+  @include grid-single(stretch);
+  opacity: 0;
+  transform: translateX(2rem);
+  width: 50vw;
+  position: relative;
+  @include transition();
+  transition-delay: 0ms;
+
+  .work-item-media-inner {
+    height: 100%;
+    color: $green;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    transform: translateX(100vw);
+    @include transition();
+    transition-delay: 500ms;
+
+    &.is-active {
+      transform: translateX(0);
+      position: relative;
+    }
+  }
+}
+
+.work-item-features {
+  margin-bottom: 0;
+}
+
+.work-slideshow {
+  width: 50vw;
+  height: 100%;
+}
+
+.work-slide {
+  height: 100%;
+}
+
+.work-slide-inner {
+  @include grid(space-between, flex-start, column);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-right: 2rem;
+}
+
+.work-slide-content {
+  @include grid(center, center);
+  height: 100%;
+  width: 100%;
+  background-color: $black;
+  padding-bottom: 2rem;
+}
+
+.work-slide-details {
+  width: 100%;
+  padding: 0 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.75rem;
+  background-color: $green-light;
+  color: $green-dark;
+}
+
+
+// Final Resting Places on Load
+.content-practice.is-active {
+
+  .practice-head {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .work-list {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .work-list-item {
+    transform: translateX(0);
+  }
+
+  .work-item-detail {
+    opacity: 1;
+    transform: translateX(0);
+    @include transition(all 750ms ease);
+    transition-delay: 1750ms;
+  }
+
+  .work-item-media {
+    opacity: 1;
+    transform: translateX(0);
+    @include transition(all 750ms ease);
+    transition-delay: 2250ms;
+  }
+}

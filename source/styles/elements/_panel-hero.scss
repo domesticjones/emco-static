@@ -1,0 +1,42 @@
+.content-hero {
+  @include grid(center, center);
+}
+
+.active-hi-there #spinner {
+  left: calc(50vw - #{$spinnerSize/2});
+  top: calc(50vh - #{$spinnerSize/2});
+}
+
+body.is-loaded #logo-hero {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+}
+
+#logo-hero {
+  opacity: 0;
+  transform: scale(0.1) translateY(-18%);
+  @include transition(all 1.666s cubic-bezier(0.075, 0.885, 0.32, 1.275));
+  transition-delay: 666ms;
+  display: block;
+  width: $spinnerSize * 0.9;
+  height: auto;
+  margin: -#{$spinnerSize/18} -#{$spinnerSize/6.66} 0 0;
+}
+
+@media (max-width: 1200px) {
+  .active-hi-there #spinner {
+    top: calc(45vh - #{$spinnerSize/2});
+  }
+
+  #logo-hero {
+    position: relative;
+  }
+}
+
+@media (max-width: 420px) {
+  #logo-hero {
+    position: relative;
+    top: 7.5vh;
+    left: -2.5vw;
+  }
+}

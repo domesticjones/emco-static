@@ -1,0 +1,136 @@
+{% set
+  worksPrimary = [
+    {
+      id: 'bump',
+      name: 'BUMP',
+      url: 'https://bumpmag.org/',
+      urlText: 'Find Boise Underground Music Pages',
+      photos: [
+        { url: 'images/work/bump-magazines.jpg', cap: 'Three of the first issues of BUMP under my creative direction' },
+        { url: 'images/work/bump-website.jpg', cap: 'Boise Underground Music Pages website' },
+        { url: 'images/work/bump-andrewwk.jpg', cap: 'Andrew WK article spread' },
+        { url: 'images/work/bump-distro.jpg', cap: 'Custom-printable distribution lists that use the website data to produce the lists' },
+        { url: 'images/work/bump-country.jpg', cap: 'Boise country music article spread' }
+      ],
+      description: '
+        I took over creative direction for Boise Underground Music Pages in December of 2017.
+        My first issue came out in January of 2018 and has been going strong ever since and working collaboratively with Boise organizations like Treefort Music Fest and Wizard’s Comic Con.
+      ',
+      descriptionMore: '
+        Creating an equally engaging and living website was an important part of the brand and identity of BUMP.
+        I integrated Google Sheets into an events calendar as well as a template for importing events directly into the magazine for print.
+      '
+    },
+    {
+      id: 'boisehive',
+      name: 'Boise Hive',
+      url: 'https://boisehive.org/',
+      urlText: 'Check out The Hive',
+      photos: [
+        { url: 'images/work/boisehive-facility.jpg', cap: 'Photo of the Boise Hive by Full Resolution Photography' },
+        { url: 'images/work/boisehive-styleguide.jpg', cap: 'Boise Hive style guide excerpts' },
+        { url: 'images/work/boisehive-mayday2017.jpg', cap: 'Poster for MayDay! 2017' },
+        { url: 'images/work/boisehive-homepage.jpg', cap: 'Screenshot of the homepage of the Boise Hive\'s website' },
+        { url: 'images/work/boisehive-booking.jpg', cap: 'Screenshot of the end user\'s reservation steps' },
+        { url: 'images/work/boisehive-dashboard.jpg', cap: 'Screenshot of the Volunteer POS Dashboard' },
+        { url: 'images/work/boisehive-admin.jpg', cap: 'Screenshot of the Volunteer POS Booking Calendar' }
+      ],
+      description: '
+        Updating the business and booking systems required a modification of policy and procedure documents along with some basic brand guides to be established.
+        Part of my duties on the board of the Boise Hive is event management and I handle the branding, coordination, and management of the annual MayDay! Event.
+      ',
+      descriptionMore: '
+        The Hive is an entirely-volunteer run organization, so keeping processes as simple as possible for everyone is vital.
+        I streamlined the booking software for the end-user as well as for the volunteer maintaining customers at The Hive.
+        Since the implementation of my system, The Boise Hive has become completely self-sufficient with reservations alone.
+      '
+    },
+    {
+      id: 'decisioninsite',
+      name: 'DecisionInsite',
+      url: 'http://decisioninsite.com/our-technology/nextgen/',
+      urlText: 'Watch more feature videos from DecisionInsite',
+      photos: [
+        { url: 'images/work/decisioninsite-new.jpg', cap: 'Revamped interface for DecisionInsite' },
+        { url: 'images/work/decisioninsite-old.jpg', cap: 'Old interface for DecisionInsite' }
+      ],
+      description: '
+        DecisionInsite provides comprehensive mapping and plotting software for educational planning entities.
+        This robest software had its issues with outdated modal layovers and difficult-to-navigate functions.
+        My job as UX designer at <a href="https://vynyl.com" target="_blank">Vynyl</a> was to identify all the features of the old DecisionInsite, then rethink and rebuild the structure of using a map and data plotting tool.
+      ',
+      descriptionMore: '
+        I developed and lead the concepts of adding the toolbar, large iconography, and an in-depth control center that provides a wide variety of stats for plotted map regions.
+      '
+    },
+    {
+      id: 'posters',
+      name: 'Posters',
+      url: '',
+      urlText: '',
+      photos: [
+        { url: 'images/work/poster-crispinglover.jpg', cap: 'Crispin Hellion Glover' },
+        { url: 'images/work/poster-ghostbusters.jpg', cap: 'Ghostbusters Party' },
+        { url: 'images/work/poster-gorilla.jpg', cap: 'The first Boise Hive benefit show' },
+        { url: 'images/work/poster-toyzoo.jpg', cap: 'Toy Zoo\'s first album release' },
+        { url: 'images/work/poster-mudhoney.jpg', cap: 'Mudhoney' },
+        { url: 'images/work/poster-davidliebehart.jpg', cap: 'David Liebe Hart' },
+        { url: 'images/work/poster-badacidtrip.jpg', cap: 'Bad Acid Trip' },
+        { url: 'images/work/poster-authorpunisher.jpg', cap: 'Author & Punisher' },
+        { url: 'images/work/poster-agentorange.jpg', cap: 'Agent Orange and In The Whale' },
+        { url: 'images/work/poster-mentors.jpg', cap: 'The Mentors' },
+        { url: 'images/work/poster-microbabies.jpg', cap: 'Alien takeover' },
+        { url: 'images/work/poster-scottkelly.jpg', cap: 'Scott Kelly of Neurosis' },
+        { url: 'images/work/poster-otherpeople.jpg', cap: 'Brett Netson & Friends' },
+        { url: 'images/work/poster-metalachi.jpg', cap: 'Metalachi' },
+        { url: 'images/work/poster-drp.jpg', cap: 'Dirty Reggae Punx' },
+        { url: 'images/work/poster-authorpunisher2.jpg', cap: 'Author & Punisher' },
+        { url: 'images/work/poster-dyingfamous.jpg', cap: 'Dying Famous' },
+        { url: 'images/work/poster-eyehategod.jpg', cap: 'Eye Hate God and Iron Reagan' }
+      ],
+      description: 'I like to make things and stuff.',
+      descriptionMore: ''
+    }
+  ]
+%}
+
+{% for work in worksPrimary %}
+  <div class="work-single{% if loop.first %} is-active{% endif %}">
+    <section id="work-{{ work.id }}" class="pane works-image">
+      <h1>{{ work.name}}</h1>
+      <div class="work-slideshow">
+        {% set photoCount = 0 %}
+        {% for photo in work.photos %}
+          {% set photoCount = loop.length %}
+          <div class="work-slideshow-inner{% if loop.first %} is-active{% endif %}">
+            <div class="work-slideshow-photo" {% if loop.first %} style="background-image: url({{ photo.url }})" {% endif %}data-photo="{{ photo.url }}"></div>
+            <div class="work-slideshow-caption">{{ photo.cap }}</div>
+          </div>
+        {% endfor %}
+        <ul class="work-slideshow-dots">
+          <li class="work-slide-arrow" data-way="prev">
+            <svg enable-background="new 0 0 362 102.4" version="1.1" viewBox="0 0 362 102.4" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+            	<path d="m358.4 63.8c4.9-2.4 4.9-10.4 0-12.9-37.9-20.8-76.5-39.8-118.1-50.8-6.1-1.2-12.2 5.5-8.6 11 8.6 12.2 19 22.6 31.2 31.8-85.7-2.4-174.4-14-258.9 6.2-6.1 1.2-4.9 11.6 1.2 11 87.5-11 174.4-2.4 261.9-1.2-9.2 10.4-18.4 20.8-27.5 30.6-4.3 4.3-1.8 13.5 5.5 12.9 40.4-4.9 78.4-18.4 113.3-38.6zm-72.9-6.7c5.5-3.7 4.3-14.1-4.3-14.1h-1.2c-7.3-7.3-14.7-14.1-22-22 28.2 9.8 54.5 22 80.8 36.1-23.9 12.2-48.3 21.4-74.7 26.3 6.1-6.7 12.2-14.1 19-20.8 2.4-1.3 3.1-3.7 2.4-5.5z"/>
+            </svg>
+            <span>Go to Previous Image</span>
+          </li>
+          {% for i in range(0, photoCount) %}
+            <li class="work-slide-nav {% if loop.first %} is-active{% endif %}" data-target="{{ loop.index }}"><span>View slide number {{ loop.index }}</span></li>
+          {% endfor %}
+          <li class="work-slide-arrow" data-way="next">
+            <svg enable-background="new 0 0 362 102.4" version="1.1" viewBox="0 0 362 102.4" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+            	<path d="m358.4 63.8c4.9-2.4 4.9-10.4 0-12.9-37.9-20.8-76.5-39.8-118.1-50.8-6.1-1.2-12.2 5.5-8.6 11 8.6 12.2 19 22.6 31.2 31.8-85.7-2.4-174.4-14-258.9 6.2-6.1 1.2-4.9 11.6 1.2 11 87.5-11 174.4-2.4 261.9-1.2-9.2 10.4-18.4 20.8-27.5 30.6-4.3 4.3-1.8 13.5 5.5 12.9 40.4-4.9 78.4-18.4 113.3-38.6zm-72.9-6.7c5.5-3.7 4.3-14.1-4.3-14.1h-1.2c-7.3-7.3-14.7-14.1-22-22 28.2 9.8 54.5 22 80.8 36.1-23.9 12.2-48.3 21.4-74.7 26.3 6.1-6.7 12.2-14.1 19-20.8 2.4-1.3 3.1-3.7 2.4-5.5z"/>
+            </svg>
+            <span>Go to Next Image</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="pane works-text">
+      <h2>About {{ work.name }}</h2>
+      <p>{{ work.description|safe }}</p>
+      {% if work.descriptionMore %}<p>{{ work.descriptionMore|safe }}</p>{% endif %}
+      {% if work.url %}<a href="{{ work.url }}" class="work-link" target="_blank">{{ work.urlText }}</a>{% endif %}
+    </section>
+  </div>
+{% endfor %}
