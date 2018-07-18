@@ -1,0 +1,8 @@
+<header class="landing-header">
+  <img src="images/emco-logo.svg" alt="Icon for EMCompany, LLC" class="landing-logo"/>
+</header>
+<article class="landing-content">
+  <h1>Eric Allen</h1>
+  <a href="tel:208-954-1830">208.954.1830</a>
+  <a href="mailto:eric@emcoboise.com">eric@emcoboise.com</a>
+</article>

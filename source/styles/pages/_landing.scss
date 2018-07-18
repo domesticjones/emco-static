@@ -1,5 +1,140 @@
 #container.landing {
+  @include grid();
+
+  &::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: $red;
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    bottom: 3.5rem;
+    height: 0.25rem;
+    width: 100%;
+    background-color: $red;
+  }
+}
+
+.landing-header {
+  @include grid(center, center);
   background-color: $white;
-  min-width: 100vw;
+  width: 30%;
   min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.landing-logo {
+  display: block;
+  width: 75%;
+}
+
+.landing-content {
+  @include grid(center, flex-start, column);
+  background-color: $black;
+  width: 70%;
+  min-height: 100vh;
+  font-size: 1.25em;
+  padding: 2em 2em 7em;
+  @include linkColor($white);
+
+  a {
+    position: relative;
+    display: block;
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    @include transition(all 500ms cubic-bezier(0.075, 0.82, 0.165, 1));
+    transform-origin: left;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -1.5rem;
+      top: 50%;
+      display: block;
+      width: 1em;
+      height: 1px;
+      background-color: $red;
+      transform: scaleX(0);
+      opacity: 0;
+      @include transition(all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
+      transform-origin: left;
+    }
+
+    &:hover {
+      transform: scale(1.25);
+
+      &::after {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    color: $grey;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+}
+@media (max-width: 1024px) {
+  .landing-header {
+    width: 40%;
+  }
+
+  .landing-content {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  #container.landing {
+    @include grid(center, stretch, column);
+    height: 100vh;
+
+    &::after {
+      bottom: auto;
+      top: 0;
+    }
+
+    &::before {
+      bottom: auto;
+      top: 3.5rem;
+    }
+  }
+
+  .landing-content,
+  .landing-header {
+    width: 100%;
+    min-height: 1px;
+  }
+
+  .landing-header {
+    padding: 6rem 2rem 2rem;
+  }
+
+  .landing-logo {
+    max-width: 400px;
+  }
+
+  .landing-content {
+    @include grid(center, center, column);
+    flex-grow: 1;
+    text-align: center;
+
+    a {
+      transform-origin: center;
+
+      &::after {
+        right: 0;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        transform-origin: center;
+      }
+    }
+  }
 }
